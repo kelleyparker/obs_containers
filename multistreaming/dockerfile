@@ -1,1 +1,9 @@
+# Use a base image with NGINX pre-installed
+FROM nginx:latest
 
+# Copy the NGINX configuration file to the appropriate location
+# Be sure to check that your nginx.conf file is correct before creating the container.
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Expose the RTMP port
+EXPOSE 1935
